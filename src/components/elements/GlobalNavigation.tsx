@@ -81,56 +81,61 @@ export const GlobalNavigation = () => {
   return (
     <Sidebar className="bg-[#F9F9FC] z-50">
       <SidebarHeader className="mt-2 pt-4 pb-2 pl-5 pr-6">
-        <Link href="/" className="hover:cursor-pointer hover:opacity-70 size-full flex items-center gap-2 font-bold">
-          <Image src="/images/engineers_logo.png" alt="Hajimariエンジニアロゴ" priority height={30} width={30} />
+        <Link
+          href="/"
+          className="hover:cursor-pointer hover:opacity-70 size-full flex items-center gap-2 font-bold"
+        >
+          <Image
+            src="/images/engineers_logo.png"
+            alt="Hajimariエンジニアロゴ"
+            priority
+            height={30}
+            width={30}
+          />
           React/Next研修
         </Link>
       </SidebarHeader>
 
       <SidebarContent className="gap-0">
-        {navigationItems
-          .map((section) => (
-            <SidebarGroup key={section.title}>
+        {navigationItems.map((section) => (
+          <SidebarGroup key={section.title}>
+            <Collapsible defaultOpen className="group/collapsible">
+              {/* 折りたたみボタン */}
+              <CollapsibleTrigger className={cn(commonStyle, navItemStyle, collapsibleStyle)}>
+                <div className={iconTitleRowStyle}>{section.title}</div>
+                {/* NOTE:閉じている時は右向き、開いている時下向きになるようにアイコンを回転 */}
+                <FaCaretRight
+                  className={cn(
+                    "transition-transform group-data-[state=open]/collapsible:rotate-90",
+                    iconStyle,
+                  )}
+                />
+              </CollapsibleTrigger>
 
-              <Collapsible defaultOpen className="group/collapsible">
-                {/* 折りたたみボタン */}
-                <CollapsibleTrigger className={cn(commonStyle, navItemStyle, collapsibleStyle)}>
-                  <div className={iconTitleRowStyle}>
-                    {section.title}
-                  </div>
-                  {/* NOTE:閉じている時は右向き、開いている時下向きになるようにアイコンを回転 */}
-                  <FaCaretRight
-                    className={cn(
-                      "transition-transform group-data-[state=open]/collapsible:rotate-90",
-                      iconStyle,
-                    )}
-                  />
-                </CollapsibleTrigger>
-
-                {/* 折りたたまれた各ページのリンク */}
-                <CollapsibleContent>
-                  <SidebarGroupContent>
-                    <SidebarMenuSub className="border-l-2">
-                      {section.items.map((item) => (
-                        <SidebarMenuSubItem
-                          key={item.title}
-                          className={cn(
-                            commonStyle,
-                            navSubItemStyle,
-                            isCurrentPage(pathname, item.url) && currentPageStyle,
-                          )}
-                        >
-                          <SidebarMenuSubButton asChild className="hover:bg-white">
-                            <Link href={item.url}>{item.title}</Link>
-                          </SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      ))}
-                    </SidebarMenuSub>
-                  </SidebarGroupContent>
-                </CollapsibleContent>
-              </Collapsible>
-            </SidebarGroup>
-          ))}
+              {/* 折りたたまれた各ページのリンク */}
+              <CollapsibleContent>
+                <SidebarGroupContent>
+                  <SidebarMenuSub className="border-l-2">
+                    {section.items.map((item) => (
+                      <SidebarMenuSubItem
+                        key={item.title}
+                        className={cn(
+                          commonStyle,
+                          navSubItemStyle,
+                          isCurrentPage(pathname, item.url) && currentPageStyle,
+                        )}
+                      >
+                        <SidebarMenuSubButton asChild className="hover:bg-white">
+                          <Link href={item.url}>{item.title}</Link>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    ))}
+                  </SidebarMenuSub>
+                </SidebarGroupContent>
+              </CollapsibleContent>
+            </Collapsible>
+          </SidebarGroup>
+        ))}
       </SidebarContent>
       <SidebarRail />
     </Sidebar>

@@ -6,9 +6,5 @@ type Props = {
 };
 
 export const Provider = ({ children }: Props) => {
-  return (
-    <SidebarProvider>
-      {children}
-    </SidebarProvider>
-  );
+  return <SidebarProvider>{children}</SidebarProvider>;
 };

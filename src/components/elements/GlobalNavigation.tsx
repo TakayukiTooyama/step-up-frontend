@@ -125,7 +125,10 @@ export const GlobalNavigation = () => {
                           isCurrentPage(pathname, item.url) && currentPageStyle,
                         )}
                       >
-                        <SidebarMenuSubButton asChild className="hover:bg-white data-[active=true]:bg-white ">
+                        <SidebarMenuSubButton
+                          asChild
+                          className="hover:bg-white data-[active=true]:bg-white "
+                        >
                           <Link href={item.url}>{item.title}</Link>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>

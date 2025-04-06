@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "d": "next dev --turbopack",
+    "b": "next build",
+    "s": "next start",
+    "f": "yarn biome format --write ./src",
+    "l": "yarn biome lint --write ./src",
+    "c": "yarn biome check --write ./src"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.3",
@@ -25,6 +27,7 @@
     "tw-animate-css": "^1.2.5"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

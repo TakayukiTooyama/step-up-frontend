@@ -20,24 +20,24 @@ import { FaCaretRight } from "react-icons/fa6";
 
 const navigationItems = [
   {
-    title: "Section1",
+    title: "基礎編",
     items: [
-      { title: "1-1. useState", url: "/section-1/1-1" },
-      { title: "1-2.", url: "/section-1/1-2" },
+      { title: "1-1", url: "/01-basic/1-1" },
+      { title: "1-1-tips", url: "/01-basic/1-1-tips" },
+      { title: "1-2", url: "/01-basic/1-2" },
+      { title: "1-3", url: "/01-basic/1-3" },
+      { title: "1-4", url: "/01-basic/1-4" },
+      { title: "1-5", url: "/01-basic/1-5" },
     ],
   },
   {
-    title: "Section2",
+    title: "応用編",
     items: [
-      { title: "2-1", url: "/section-2/2-1" },
-      { title: "2-2", url: "/section-2/2-2" },
-    ],
-  },
-  {
-    title: "Section3",
-    items: [
-      { title: "3-1", url: "/section-3/3-1" },
-      { title: "3-2", url: "/section-3/3-2" },
+      { title: "2-1", url: "/02-advanced/2-1" },
+      { title: "2-2", url: "/02-advanced/2-2" },
+      { title: "2-3", url: "/02-advanced/2-3" },
+      { title: "2-4", url: "/02-advanced/2-4" },
+      { title: "2-5", url: "/02-advanced/2-5" },
     ],
   },
 ];

@@ -80,18 +80,11 @@ export const GlobalNavigation = () => {
 
   return (
     <Sidebar className="bg-[#F9F9FC] z-50">
-      <SidebarHeader className="mt-2 pt-4 pb-2 pl-5 pr-6">
+      <SidebarHeader className="mt-2 pt-4 pb-2 pl-4 pr-6">
         <Link
           href="/"
           className="hover:cursor-pointer hover:opacity-70 size-full flex items-center gap-2 font-bold"
         >
-          <Image
-            src="/images/engineers_logo.png"
-            alt="Hajimariエンジニアロゴ"
-            priority
-            height={30}
-            width={30}
-          />
           React/Next研修
         </Link>
       </SidebarHeader>

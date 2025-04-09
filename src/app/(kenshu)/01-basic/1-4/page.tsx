@@ -9,7 +9,7 @@ export default function Basic4() {
       description={`
 ＜問題＞
 1.空配列を初期値としたuseStateを作成（状態名はtodos, Todo型は作成済み）
-2.""を初期値としたuseStateを作成（状態名はinputText）
+2.空文字を初期値としたuseStateを作成（状態名はinputText）
 3.inputを入力したら、inputTextの値が更新されるようにする
 4.追加ボタンをクリックしたら、inputTextの値がtodosに追加されるようにする（画面上にも表示）
 5.checkboxのチェックが入ったら、todoのcompletedがtrueになるようにする

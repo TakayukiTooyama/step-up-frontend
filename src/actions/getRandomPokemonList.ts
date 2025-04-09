@@ -12,9 +12,7 @@ export async function getRandomPokemonList() {
   const data = (await pokemonListRes.json()) as PokemonApiResponse;
 
   // 並列で各ポケモンの詳細を取得
-  const pokemonDetails = await Promise.all(
-    data.results.map((pokemon) => getPokemon(pokemon.name))
-  );
+  const pokemonDetails = await Promise.all(data.results.map((pokemon) => getPokemon(pokemon.name)));
 
   return pokemonDetails.filter((pokemon) => pokemon !== null);
 }

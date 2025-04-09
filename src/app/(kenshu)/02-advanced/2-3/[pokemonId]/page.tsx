@@ -1,6 +1,6 @@
 import { getPokemon } from "@/actions/getPokemon";
-import { getPokemonDetail } from "@/actions/getPokemonDetail";
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense } from "react";
 
 type PageProps = {
@@ -31,6 +31,7 @@ const PokemonDetail = async ({ pokemonId }: { pokemonId: string }) => {
       <h1 className="text-2xl font-bold">{pokemon.name}</h1>
       <Image src={pokemon.imageUrl} alt={pokemon.name} width={100} height={100} />
       <p>{pokemon.description}</p>
+      <Link href="/02-advanced/2-3">一覧に戻る</Link>
     </div>
   );
 };

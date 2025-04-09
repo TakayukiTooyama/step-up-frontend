@@ -1,6 +1,6 @@
+import { fourWaitFetch } from "@/actions/fourWaitFetch";
+import { twoWaitFetch } from "@/actions/twoWaitFetch";
 import { Suspense } from "react";
-import { fourWaitFetch } from "../../../actions/fourWaitFetch";
-import { twoWaitFetch } from "../../../actions/twoWaitFetch";
 
 /**
  * ＜問題＞
@@ -8,18 +8,14 @@ import { twoWaitFetch } from "../../../actions/twoWaitFetch";
  * 2.直列から並列の非同期処理に修正する
  *
  * ＜目的＞
- * 1.Suspenseを使ってみる
- * 2.直列と並列の理解を深める
+ * 1.Suspenseを使って並列処理を最適化できるようになる
+ * 2.fallbackを設定できるようになる
  */
 export const Mondai = async () => {
-  return (
-    <Suspense>
-      <PromiseComponent />
-    </Suspense>
-  );
+  return <Suspense><PromiseComponent1 /></Suspense>;
 };
 
-const PromiseComponent = async () => {
+const PromiseComponent1 = async () => {
   const data1 = await fourWaitFetch();
   const data2 = await twoWaitFetch();
 
@@ -30,3 +26,5 @@ const PromiseComponent = async () => {
     </>
   );
 };
+
+const PromiseComponent2 = async () => {};

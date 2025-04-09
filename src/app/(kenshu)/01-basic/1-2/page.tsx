@@ -11,11 +11,13 @@ export default function Basic2() {
 1.features/01-basic/1-2/componentsに CountButtonコンポーネントを作成
 2.PropsとしてchildrenとonClickを受け取れるようにする
 3.exportし、下記のJSXを書き換える
+4.CountButtonの見た目を調整しよう。コピペでOK。
+  （className="rounded-lg border px-2.5 py-0.5 text-xs hover:bg-gray-50"）
 
 ＜目的＞
-・コンポーネントの作成し、共通化ができるようになる
-・childrenをPropsとして受け取れることを理解する
-・named exportの理解する
+1.コンポーネントの作成し、共通のUIを作成できるようになる
+2.childrenをPropsとして受け取れることを理解する
+3.named exportの理解を深める
       `}
       answer={<Answer />}
     >

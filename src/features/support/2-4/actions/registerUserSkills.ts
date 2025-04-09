@@ -14,7 +14,7 @@ export const registerUserSkills = async (formData: FormData) => {
     };
   }
 
-  await new Promise<void>((resolve) => setTimeout(resolve, 2000))
+  await new Promise<void>((resolve) => setTimeout(resolve, 2000));
 
   return {
     success: true,

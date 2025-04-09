@@ -3,7 +3,7 @@ export const registerUserSkills = async (formData: FormData) => {
   // console.info("得意な技術", )
 
   // 1秒待機（サーバーアクションの処理時間を模している）
-  await new Promise<void>((resolve) => setTimeout(resolve, 1000))
+  await new Promise<void>((resolve) => setTimeout(resolve, 1000));
 
   return {
     success: true,

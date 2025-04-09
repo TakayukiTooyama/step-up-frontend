@@ -11,19 +11,22 @@ import { USER_SKILLS } from "@/constants";
 type ActionState = {
   success: boolean;
   message: string;
-}
+};
 
 const initialState: ActionState = {
   success: false,
   message: "",
-}
+};
 
 export const Answer = () => {
-  const [_, formAction, isPending] = useActionState(async (_prevState: ActionState, formData: FormData) => {
-    const res = await registerUserSkills(formData);
-    res.success ? toast.success(res.message) : toast.error(res.message);
-    return res;
-  }, initialState);
+  const [_, formAction, isPending] = useActionState(
+    async (_prevState: ActionState, formData: FormData) => {
+      const res = await registerUserSkills(formData);
+      res.success ? toast.success(res.message) : toast.error(res.message);
+      return res;
+    },
+    initialState,
+  );
 
   return (
     <form action={formAction} className="flex flex-col gap-4 w-full">

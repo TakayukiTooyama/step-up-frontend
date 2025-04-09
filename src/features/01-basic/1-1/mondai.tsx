@@ -1,25 +1,18 @@
-"use client";
-
-import { useState } from "react";
-
-/**
+"use client"; /**
  * ＜問題＞
- * 1.カウントが-1されるボタンの追加
- * 2.カウントがリセットされるボタンの追加
+ * 1.カウントが+1されるボタンを完成させる(状態名はcountとする)
+ * 2.カウントが-1されるボタンの追加
+ * 3.カウントがリセットされるボタンの追加
  *
  * ＜目的＞
  * 1.useStateの理解を深める
  * 2.JSXの理解を深める
  */
 export const Mondai = () => {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="flex items-center gap-4">
-      <p>{count}</p>
-      <button type="button" onClick={() => setCount((prev) => prev + 1)}>
-        +
-      </button>
+      {/* <p>{count}</p> */}
+      <button type="button">+</button>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { FormWrapper } from "../FormWrapper";
 
 type Props = {
-  name: string;
+  name?: string;
   label?: string;
   required?: boolean;
   errors?: string[];

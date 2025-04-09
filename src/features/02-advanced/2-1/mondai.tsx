@@ -1,33 +1,31 @@
+import { Suspense } from "react";
+import { fourWaitFetch } from "../../../actions/fourWaitFetch";
+import { twoWaitFetch } from "../../../actions/twoWaitFetch";
+
 /**
  * ＜問題＞
- * 1.src/app/(kenshu)/2-1 に dynamic route を用いて詳細ページを作成する
- * 2.Linkコンポーネントを用いて詳細ページに遷移できるようにする
- * 3.useRouterを用いて、詳細ページから一覧ページに戻れるようにする
- *
- * ＜参考＞
- * https://nextjs.org/docs/pages/api-reference/functions/use-router
+ * 1.直列から並列の非同期処理に修正する
  *
  * ＜目的＞
- * 1.dynamic routeを理解する
- * 2.Next.jsのLinkコンポーネントを使えるようになる
- * 3.useRouterを使えるようになる
+ * 1.Suspenseを使ってみる
+ * 2.直列と並列の理解を深める
  */
 export const Mondai = async () => {
   return (
-    <div>
-      <h2 className="font-bold">ポケモン一覧</h2>
-      {/* <PokemonList /> */}
-    </div>
+    <Suspense>
+      <PromiseComponent />
+    </Suspense>
   );
 };
 
-const PokemonList: React.FC = () => {
-  return <ul>{/* <PokemonListItem /> */}</ul>;
-};
+const PromiseComponent = async () => {
+  const data1 = await fourWaitFetch();
+  const data2 = await twoWaitFetch();
 
-type ItemProps = {
-  name: string;
-};
-const PokemonListItem: React.FC<ItemProps> = ({ name }) => {
-  return <li key={name}>{name}</li>;
+  return (
+    <div>
+      <p>{data1}</p>
+      <p>{data2}</p>
+    </div>
+  );
 };

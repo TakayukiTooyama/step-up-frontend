@@ -1,14 +1,20 @@
 "use client";
 
+import { Input } from "@/components/elements/form/Input";
+import { Button } from "@/components/ui/button";
 import { Todo } from "@/types";
 
 /**
  * ＜問題＞
- * 1.空配列を初期値としたuseStateを作成（状態名はtodos）
- * 2.inputTextを初期値としたuseStateを作成（状態名はinputText）
- * 3.inputTextを入力したら、inputTextをtodosに追加する
- * 4.todosを表示する
- * 5.todosを削除する
+ * 1.空配列を初期値としたuseStateを作成（状態名はtodos, Todo型は作成済み）
+ * 2.""を初期値としたuseStateを作成（状態名はinputText）
+ * 3.inputを入力したら、inputTextの値が更新されるようにする
+ * 4.追加ボタンをクリックしたら、inputTextの値がtodosに追加されるようにする（画面上にも表示）
+ * 5.checkboxのチェックが入ったら、todoのcompletedがtrueになるようにする
+ * 6.todoを削除できるようにする
+ *
+ * ＜補足＞
+ * ・idはcrypto.randomUUID()で作成できます
  *
  * ＜目的＞
  * 1.配列操作の復習（map,filter）
@@ -18,28 +24,31 @@ import { Todo } from "@/types";
 export const Mondai = () => {
   const handleInputChange = () => {};
 
-  const handleCompletedChange = () => {};
-
   const handleAddTodo = () => {};
+
+  const handleCompletedChange = () => {};
 
   const handleDeleteTodo = () => {};
 
   return (
-    <div className="p-4">
+    <div className="w-full max-w-sm">
+      <h2 className="text-lg font-bold mb-2">TODOリスト</h2>
       <form onSubmit={() => {}} className="flex gap-2">
-        <input type="text" onChange={() => {}} className="text-black rounded-lg py-1 px-2" />
-        <button type="submit">追加</button>
+        <Input onChange={() => {}}/>
+        <Button type="submit">追加</Button>
       </form>
-      <ul>{/* <TodoListItem/> */}</ul>
+      <ul className="flex flex-col gap-2">
+        {/* <TodoListItem/> */}
+      </ul>
     </div>
   );
-};
+}
 
 /**
  * タスクのリストアイテム
  * ↓ このようなUI
- * [] タスク名 x
- * [x] タスク名 x
+ * [] タスク名 🗑️
+ * [x] タスク名 🗑️
  */
 type TodoListItemProps = {
   todo: Todo;

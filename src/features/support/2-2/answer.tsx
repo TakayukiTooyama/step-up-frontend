@@ -4,19 +4,25 @@ import { Suspense } from "react";
 
 export const Answer = async () => {
   return (
-    <Suspense>
-      <PromiseComponent />
-    </Suspense>
+    <>
+      <Suspense>
+        <PromiseComponent1 />
+      </Suspense>
+      <Suspense>
+        <PromiseComponent2 />
+      </Suspense>
+    </>
   );
 };
 
-const PromiseComponent = async () => {
-  const [data1, data2] = await Promise.all([fourWaitFetch(), twoWaitFetch()]);
+const PromiseComponent1 = async () => {
+  const data1 = await fourWaitFetch();
 
-  return (
-    <>
-      <p>{data1}</p>
-      <p>{data2}</p>
-    </>
-  );
+  return <p>{data1}</p>;
+};
+
+const PromiseComponent2 = async () => {
+  const data2 = await twoWaitFetch();
+
+  return <p>{data2}</p>;
 };

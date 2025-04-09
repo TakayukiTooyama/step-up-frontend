@@ -1,28 +1,32 @@
-import { fourWaitFetch } from "@/actions/fourWaitFetch";
-import { twoWaitFetch } from "@/actions/twoWaitFetch";
+import { getRandomPokemonList } from "@/actions/getRandomPokemonList";
+import Link from "next/link";
 import { Suspense } from "react";
 
 export const Answer = async () => {
   return (
-    <>
-      <Suspense>
-        <PromiseComponent1 />
+    <div>
+      <h2 className="font-bold">ポケモン一覧</h2>
+      <Suspense fallback={<div>Loading...</div>}>
+        <PokemonList />
       </Suspense>
-      <Suspense>
-        <PromiseComponent2 />
-      </Suspense>
-    </>
+    </div>
   );
 };
 
-const PromiseComponent1 = async () => {
-  const data1 = await fourWaitFetch();
+const PokemonList = async () => {
+  const pokemons = await getRandomPokemonList();
 
-  return <p>{data1}</p>;
-};
+  if (pokemons.length === 0) {
+    return <div>ポケモンが見つかりません</div>;
+  }
 
-const PromiseComponent2 = async () => {
-  const data2 = await twoWaitFetch();
-
-  return <p>{data2}</p>;
+  return (
+    <ul>
+      {pokemons.map((pokemon) => (
+        <li key={pokemon.id}>
+          <Link href={`/02-advanced/2-3/${pokemon.id}`}>{pokemon.name}</Link>
+        </li>
+      ))}
+    </ul>
+  );
 };

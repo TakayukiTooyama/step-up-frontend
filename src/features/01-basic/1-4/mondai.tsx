@@ -34,15 +34,13 @@ export const Mondai = () => {
     <div className="w-full max-w-sm">
       <h2 className="text-lg font-bold mb-2">TODOリスト</h2>
       <form onSubmit={() => {}} className="flex gap-2">
-        <Input onChange={() => {}}/>
+        <Input onChange={() => {}} />
         <Button type="submit">追加</Button>
       </form>
-      <ul className="flex flex-col gap-2">
-        {/* <TodoListItem/> */}
-      </ul>
+      <ul className="flex flex-col gap-2">{/* <TodoListItem/> */}</ul>
     </div>
   );
-}
+};
 
 /**
  * タスクのリストアイテム

@@ -4,7 +4,9 @@ export const Answer = () => {
   const today = new Date();
   return (
     <div className="flex gap-1">
-      <DateBadge1 date={{ year: today.getFullYear(), month: today.getMonth(), day: today.getDate() }} />
+      <DateBadge1
+        date={{ year: today.getFullYear(), month: today.getMonth(), day: today.getDate() }}
+      />
       <DateBadge2 date={`${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`} />
     </div>
   );
@@ -32,12 +34,10 @@ const DateBadge1 = ({ date }: DateBadge1Props) => {
  * 日付を表示するバッジのコンポーネント
  */
 type DateBadge2Props = {
-  date: string
+  date: string;
 };
-const DateBadge2= ({ date }: DateBadge2Props) => {
+const DateBadge2 = ({ date }: DateBadge2Props) => {
   return (
-    <div className="inline-flex items-center rounded-lg border px-2.5 py-0.5 text-xs">
-      {date}
-    </div>
+    <div className="inline-flex items-center rounded-lg border px-2.5 py-0.5 text-xs">{date}</div>
   );
 };

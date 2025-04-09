@@ -23,9 +23,11 @@ export const Mondai = async () => {
 };
 
 const PokemonList: React.FC = () => {
-  return <ul>
-    <li />
-  </ul>;
+  return (
+    <ul>
+      <li />
+    </ul>
+  );
 };
 
 /**

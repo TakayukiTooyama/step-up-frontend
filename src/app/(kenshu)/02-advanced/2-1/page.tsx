@@ -5,7 +5,7 @@ import { Answer } from "@/features/support/2-1/answer";
 export default async function Advanced2() {
   return (
     <SectionWrapper
-      title="Suspenseと直列並列を理解しよう"
+      title="直列から並列の非同期処理を修正できるようになろう"
       description={`
 ＜問題＞
 1.Suspenseを使い、エラーを解決する

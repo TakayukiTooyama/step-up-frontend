@@ -67,7 +67,6 @@ export const Answer = () => {
   );
 };
 
-
 /**
  * タスクのリストアイテム
  * ↓ このようなUI
@@ -81,10 +80,7 @@ type TodoListItemProps = {
 };
 const TodoListItem = ({ todo, onCompletedChange, onDeleteTodo }: TodoListItemProps) => {
   return (
-    <li
-      key={todo.id}
-      className={`flex items-center gap-2  ${todo.completed && "opacity-40"}`}
-    >
+    <li key={todo.id} className={`flex items-center gap-2  ${todo.completed && "opacity-40"}`}>
       <input
         type="checkbox"
         className="size-4 hover:cursor-pointer"
@@ -92,7 +88,12 @@ const TodoListItem = ({ todo, onCompletedChange, onDeleteTodo }: TodoListItemPro
         onChange={() => onCompletedChange(todo.id)}
       />
       <p>{todo.text}</p>
-      <Button size="icon" type="button" onClick={() => onDeleteTodo(todo.id)} className="bg-red-400 hover:bg-red-500">
+      <Button
+        size="icon"
+        type="button"
+        onClick={() => onDeleteTodo(todo.id)}
+        className="bg-red-400 hover:bg-red-500"
+      >
         <Trash2 className="size-4" />
       </Button>
     </li>

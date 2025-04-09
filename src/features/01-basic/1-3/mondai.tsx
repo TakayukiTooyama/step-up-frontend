@@ -44,12 +44,10 @@ const DateBadge1 = ({ date }: DateBadge1Props) => {
  * 日付を表示するバッジのコンポーネント
  */
 type DateBadge2Props = {
-  date: string
+  date: string;
 };
-const DateBadge2= ({ date }: DateBadge2Props) => {
+const DateBadge2 = ({ date }: DateBadge2Props) => {
   return (
-    <div className="inline-flex items-center rounded-lg border px-2.5 py-0.5 text-xs">
-      {date}
-    </div>
+    <div className="inline-flex items-center rounded-lg border px-2.5 py-0.5 text-xs">{date}</div>
   );
 };

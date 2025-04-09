@@ -1,6 +1,5 @@
 import { fourWaitFetch } from "@/actions/fourWaitFetch";
 import { twoWaitFetch } from "@/actions/twoWaitFetch";
-import { Suspense } from "react";
 
 /**
  * ＜問題＞
@@ -12,7 +11,9 @@ import { Suspense } from "react";
  * 2.fallbackを設定できるようになる
  */
 export const Mondai = async () => {
-  return <Suspense><PromiseComponent1 /></Suspense>;
+  return (
+    <PromiseComponent1 />
+  );
 };
 
 const PromiseComponent1 = async () => {

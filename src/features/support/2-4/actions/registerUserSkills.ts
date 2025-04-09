@@ -1,8 +1,8 @@
 "use server";
 
 export const registerUserSkills = async (formData: FormData) => {
-  const name = formData.get("name");
-  const skills = formData.getAll("skills[]");
+  const name = formData.get("name") as string;
+  const skills = formData.getAll("skills[]") as string[];
 
   console.info("名前: ", name);
   console.info("得意な技術", skills);

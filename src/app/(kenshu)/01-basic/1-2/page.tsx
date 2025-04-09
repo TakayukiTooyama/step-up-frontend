@@ -5,7 +5,7 @@ import { Answer } from "@/features/support/1-2/answer";
 export default function Basic2() {
   return (
     <SectionWrapper
-      title="コンポーネント・Props・exportを理解しよう"
+      title="コンポーネント・Props・exportの理解を深めよう"
       description={`
 ＜問題＞
 1.features/01-basic/1-2/componentsに CountButtonコンポーネントを作成

@@ -11,9 +11,7 @@ import { twoWaitFetch } from "@/actions/twoWaitFetch";
  * 2.fallbackを設定できるようになる
  */
 export const Mondai = async () => {
-  return (
-    <PromiseComponent1 />
-  );
+  return <PromiseComponent1 />;
 };
 
 const PromiseComponent1 = async () => {

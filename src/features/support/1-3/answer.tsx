@@ -5,9 +5,9 @@ export const Answer = () => {
   return (
     <div className="flex gap-1">
       <DateBadge1
-        date={{ year: today.getFullYear(), month: today.getMonth(), day: today.getDate() }}
+        date={{ year: today.getFullYear(), month: today.getMonth() + 1, day: today.getDate() }}
       />
-      <DateBadge2 date={`${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`} />
+      <DateBadge2 date={`${today.getFullYear()}/${today.getMonth() + 2}/${today.getDate()}`} />
     </div>
   );
 };

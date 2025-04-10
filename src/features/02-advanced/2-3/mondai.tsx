@@ -2,16 +2,15 @@
  * ＜問題＞
  * 1.「Suspense」「PokemonList」「非同期関数getRandomPokemonList」を使用し、ポケモン名の一覧を表示させる
  * 2.早期リターンを用いて、ポケモンが見つからない場合は、「ポケモンが見つかりません」と表示させる
- * 3.src/app/(kenshu)/02-advanced/2-1 に dynamic route を用いて詳細ページを作成する（ディレクトリ名はpokemonId）
+ * 3.src/app/(kenshu)/02-advanced/2-3 に dynamic route を用いて詳細ページを作成する（ディレクトリ名はpokemonId）
  * 4.console.infoを用いて、詳細ページのpokemonIdを出力する
- * 5.Linkコンポーネントを用いてそれぞれのポケモンの名前をクリックすると詳細ページに遷移できるようにする
- * 6.useRouterを用いて、詳細ページから一覧ページに戻れるようにする
+ * 5.Linkコンポーネントを用いて詳細ページに遷移できるようにする
+ * 6.詳細ページに一覧に戻るボタンを追加する
  *
  * ＜目的＞
  * 1.Suspenseを使えるようになる
- * 1.dynamic routeを理解する
- * 2.Next.jsのLinkコンポーネントを使えるようになる
- * 3.useRouterを使えるようになる
+ * 2.dynamic routeを理解する
+ * 3.Next.jsのLinkコンポーネントを使えるようになる
  */
 export const Mondai = async () => {
   return (
@@ -55,10 +54,6 @@ const PokemonList: React.FC = () => {
 
 // const PokemonDetail = async ({ pokemonId }: { pokemonId: string }) => {
 //   const pokemon = await getPokemon(pokemonId);
-
-//   if (!pokemon) {
-//     return <div>ポケモンが見つかりません</div>;
-//   }
 
 //   return (
 //     <div className="border p-6 rounded-lg">

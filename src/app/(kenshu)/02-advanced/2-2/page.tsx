@@ -8,8 +8,8 @@ export default async function Advanced3() {
       title="Suspenseを使って並列処理を最適化しよう"
       description={`
 ＜問題＞
-1.Suspenseを使い、エラーを解決する
-2.直列から並列の非同期処理に修正する
+1.Suspenseを使って並列処理を最適化する
+2.fallbackを設定する
 
 ＜目的＞
 1.Suspenseを使って並列処理を最適化できるようになる

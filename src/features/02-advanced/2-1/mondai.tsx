@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { fourWaitFetch } from "../../../actions/fourWaitFetch";
 import { twoWaitFetch } from "../../../actions/twoWaitFetch";
 
@@ -11,11 +10,7 @@ import { twoWaitFetch } from "../../../actions/twoWaitFetch";
  * 2.直列と並列の理解を深める
  */
 export const Mondai = async () => {
-  return (
-    <Suspense>
-      <PromiseComponent />
-    </Suspense>
-  );
+  return <PromiseComponent />;
 };
 
 const PromiseComponent = async () => {

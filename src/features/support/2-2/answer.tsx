@@ -4,14 +4,14 @@ import { Suspense } from "react";
 
 export const Answer = async () => {
   return (
-    <>
-      <Suspense>
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
         <PromiseComponent1 />
       </Suspense>
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <PromiseComponent2 />
       </Suspense>
-    </>
+    </div>
   );
 };
 

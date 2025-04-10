@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 2025年新卒エンジニア向け
 
-## Getting Started
+このGithub Repositoryは、2025年新卒エンジニア向けのReact/Next.jsの基礎を学ぶために作成されました。
 
-First, run the development server:
+React/Next.jsとWeb開発は切っても切れない縁で結ばれており、Web開発をする上で最も必要なスキルの一つです。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+このGithub Repositoryでは、そんなReact/Next.jsを手を動かして学ぶことを目的としています。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+この問題を行う上で、生成AIの利用は検知できないので特に言及しませんが、本課題の目的を考えた行動をとるようにしてください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+むしろ先輩エンジニアに聞いてみてください、いいコミュニケーションのきっかけになるはずです。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 内容
 
-## Learn More
+### 基礎編
+1. カウンターを作成し、useStateとJSXの理解を深めよう
+  【Tips】setState の 2 種類の引数の挙動の違いを理解しよう
+2. コンポーネント・Props・exportの理解を深めよう
+3. Props・テンプレートリテラルの理解を深めよう
+4. Reactでの基本的な配列操作をマスターしよう
+5. カスタムフックを作れるようになろう
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 応用編
+1. 直列から並列の非同期処理に修正しよう
+2. Suspenseを使って並列処理を最適化しよう
+3. Dynamic Routeとページ遷移を理解しよう
+4. サーバーアクションを理解しよう
+5. useActionStateを理解しよう

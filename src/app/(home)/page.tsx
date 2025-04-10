@@ -19,9 +19,9 @@ export default function Home() {
     {
       group: "応用編",
       items: [
-        { href: "/02-advanced/2-1", label: "1. 直列から並列の非同期処理を修正しよう" },
+        { href: "/02-advanced/2-1", label: "1. 直列から並列の非同期処理に修正しよう" },
         { href: "/02-advanced/2-2", label: "2. Suspenseを使って並列処理を最適化しよう" },
-        { href: "/02-advanced/2-3", label: "3. Dynamic Routeとページ遷移をを理解しよう" },
+        { href: "/02-advanced/2-3", label: "3. Dynamic Routeとページ遷移を理解しよう" },
         { href: "/02-advanced/2-4", label: "4. サーバーアクションを理解しよう" },
         { href: "/02-advanced/2-5", label: "5. useActionStateを理解しよう" },
       ],
